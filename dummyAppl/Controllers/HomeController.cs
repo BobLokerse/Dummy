@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dummy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +16,8 @@ namespace dummyAppl.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            var helper = new Helper();
+            ViewBag.Message = helper.Welcome();
 
             return View();
         }
